@@ -57,6 +57,7 @@ function ProductProvider({ children }) {
         value={{
           data,
           cart,
+          setCart,
           setData,
           loading,
           setLoading,

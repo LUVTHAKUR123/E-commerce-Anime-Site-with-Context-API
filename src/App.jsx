@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./pages/Navbar";
 import CardDetails from "./pages/CardDetails";
 import CartLists from "./components/CartLists";
+import ProductDetails from "./pages/ProductDetails";
 function App() {
   return (
     <>
@@ -21,6 +22,8 @@ function App() {
               path="/cartContextDetails"
               element={<CartLists />}
             />
+            <Route path="/products/:id" element={<ProductDetails />} />
+
           </Routes>
         </CombineContext>
       </BrowserRouter>

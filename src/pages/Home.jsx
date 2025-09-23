@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../context/ProductContext";
 import axios from "axios";
-import { Button, Grid, Typography } from "@mui/material";
+import {Container, Button, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 // import { CartCountContext } from "../context/CartCountContext";
 // import CircularProgress from "@mui/material/CircularProgress";
@@ -34,6 +34,8 @@ function Home() {
   };
   return (
     <>
+
+
       <Typography
         variant="h4"
         style={{
@@ -42,7 +44,7 @@ function Home() {
           // marginBottom: "20px",
           padding:"20px"
         }}
-      >
+        >
         Anime Lists :
       </Typography>
 
@@ -64,7 +66,7 @@ function Home() {
                   borderRadius: 8,
                   padding: 16,
                 }}
-              >
+                >
                 <img
                   src={item.images.jpg.image_url}
                   alt={item.title}
@@ -75,7 +77,7 @@ function Home() {
                     objectFit: "cover",
                   }}
                   onClick={() => handleOpenCard(item)}
-                />
+                  />
                 <Typography
                   style={{
                     fontFamily: "cursive",
@@ -97,7 +99,7 @@ function Home() {
                   }}
                   type="submit"
                   onClick={() => handleAddToCart(item)}
-                >
+                  >
                   ADD TO CART
                 </Button>
               </div>
@@ -105,6 +107,7 @@ function Home() {
           ))
         )}
       </Grid>
+      
     </>
   );
 }

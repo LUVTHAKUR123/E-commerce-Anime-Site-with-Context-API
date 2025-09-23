@@ -141,10 +141,15 @@ function CartContextDetails() {
           <Typography
             variant="h6"
             align="center"
-            sx={{ py: 5, fontStyle: "italic", color: "gray" }}
+            sx={{ py: 5, fontStyle: "italic", color: "gray", padding: 20 }}
           >
             {" "}
-            No Product selected
+            ⚠️ No items selected You haven’t added any items to your cart yet.
+            Please select at least one item before proceeding to the Selected
+            Card section.
+            <a href="./" target="_blank">
+              Visit Our Site
+            </a>
           </Typography>
         ) : (
           <Table>
