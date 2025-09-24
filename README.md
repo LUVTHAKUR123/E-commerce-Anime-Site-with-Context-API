@@ -21,9 +21,9 @@ A simple yet functional anime-themed product listing web application built with 
 
 | Tool / Library      | Version           | Description                              | Link |
 |---------------------|-------------------|------------------------------------------|------|
-| **React**           | ^18.x             | Frontend JavaScript library              | [React](https://reactjs.org/) |
-| **React Router DOM**| ^6.x              | Client-side routing                      | [React Router](https://reactrouter.com/en/main) |
-| **Material UI (MUI)**| ^5.x              | UI component library                     | [Material UI](https://mui.com/) |
+| **React**           | ^19.x             | Frontend JavaScript library              | [React](https://reactjs.org/) |
+| **React Router DOM**| ^7.x              | Client-side routing                      | [React Router](https://reactrouter.com/en/main) |
+| **Material UI (MUI)**| ^7.x              | UI component library                     | [Material UI](https://mui.com/) |
 | **Axios**           | ^1.x              | Promise-based HTTP client                | [Axios](https://axios-http.com/) |
 | **Jikan API**       | v4 (public)       | Anime data (MyAnimeList unofficial API)  | [Jikan API](https://jikan.moe/) |
 | **React Context API** | Built-in         | State management                         | [React Context](https://reactjs.org/docs/context.html) |
@@ -36,7 +36,7 @@ A simple yet functional anime-themed product listing web application built with 
 ## 📸 Screenshots
 
 ### 🏠 Home Page  
-![Home Page](./scr/assets/images/Home.png) 
+![Home Page](./src/assets/images/Home.png) 
 
 ### 🛒 Selected Cart Details Page  
 ![Selected Cart Details](./src/assets/images/SelectedCartlists.png)  
@@ -44,8 +44,7 @@ A simple yet functional anime-themed product listing web application built with 
 ### 📄 Product (Card) Details Page  
 ![Cart Details](./src/assets/images/CartDetails.png)  
 
-### 🔍 Searchbar Dropdown Results  
-![Searchbar](./src/assets/images/Searchbar.png)
+
 
 
 ---
