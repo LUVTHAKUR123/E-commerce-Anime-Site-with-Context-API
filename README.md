@@ -44,8 +44,7 @@ A simple yet functional anime-themed product listing web application built with 
 ### 📄 Product (Card) Details Page  
 ![Cart Details](./src/assets/images/CartDetails.png)  
 
-### 🔍 Searchbar Dropdown Results  
-![Searchbar](./src/assets/images/Searchbar.png)
+
 
 
 ---
