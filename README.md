@@ -43,7 +43,7 @@ A simple yet functional anime-themed product listing web application built with 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/anime-store-app.git
+https://github.com/LUVTHAKUR123/E-commerce-Anime-Site-with-Context-API.git
 
 ```
 ## Install and Start the Development server
