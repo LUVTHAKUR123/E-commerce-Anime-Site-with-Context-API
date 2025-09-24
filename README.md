@@ -36,7 +36,7 @@ A simple yet functional anime-themed product listing web application built with 
 ## 📸 Screenshots
 
 ### 🏠 Home Page  
-![Home Page](./scr/assets/images/Home.png) 
+![Home Page](./src/assets/images/Home.png) 
 
 ### 🛒 Selected Cart Details Page  
 ![Selected Cart Details](./src/assets/images/SelectedCartlists.png)  
