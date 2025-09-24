@@ -5,7 +5,7 @@ import axios from "axios"; // Axios for API calls
 import { Container, Button, Grid, Typography } from "@mui/material"; // MUI components for layout, UI, and typography
 import { useNavigate } from "react-router-dom"; // React Router hook for navigation
 // Functional component: Home page
-const JIKAN_API_URL = import.meta.env.VITE_JIKAN_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Home() {
   // Destructuring data, loading state, and handlers from context
@@ -20,7 +20,7 @@ function Home() {
     const fetchData = async () => {
       try {
         setLoading(true); // Start loading
-        const response = await axios.get(`${JIKAN_API_URL}?q=`); // Fetch anime list
+        const response = await axios.get(`${API_URL}?q=`); // Fetch anime list
         setData(response.data.data); // Store data in context
         console.log("data", response.data); // Log for debugging
       } catch (err) {

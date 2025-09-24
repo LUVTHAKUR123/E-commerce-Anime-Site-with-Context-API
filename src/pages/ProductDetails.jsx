@@ -14,7 +14,7 @@ import {
 import axios from "axios";
 // Importing ProductContext to handle cart operations
 import { ProductContext } from "../context/ProductContext";
-const JIKAN_API_URL = import.meta.env.VITE_JIKAN_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Main functional component
 const ProductDetails = () => {
@@ -36,7 +36,7 @@ const ProductDetails = () => {
       try {
         // Make GET request to Jikan API for anime by ID
         const response = await axios.get(
-          `${JIKAN_API_URL}/${id}`
+          `${API_URL}/${id}`
         );
         // Store fetched product data
         setProduct(response.data.data);
