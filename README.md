@@ -1,11 +1,11 @@
-# 🌸 E-commerce-Anime-Site-with-Context-API
+# E-commerce-Anime-Site-with-Context-API
 
 
 A simple yet functional anime-themed product listing web application built with **React**, **Material UI**, and **React Router**. This app integrates with the public [Jikan API](https://jikan.moe/) to fetch real-time anime data, allowing users to browse, search, view details, and manage a shopping cart.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - 🔍 **Search Anime**: Live search powered by the Jikan API.
 - 📦 **Product Listing**: Browse top anime with pagination-ready structure.
@@ -35,7 +35,7 @@ A simple yet functional anime-themed product listing web application built with 
 
 ## 📸 Screenshots
 
-### 🏠 Home Page  
+###  Home Page  
 ![Home Page](./src/assets/images/Home.png) 
 
 ### 🛒 Selected Cart Details Page  
