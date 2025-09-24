@@ -29,6 +29,8 @@ import { useNavigate, Link } from "react-router-dom";
 // Importing ProductContext to access the cart
 import { ProductContext } from "../context/ProductContext";
 
+const JIKAN_API_URL = import.meta.env.VITE_JIKAN_API_URL;
+
 // Functional component for the Navbar
 function Navbar() {
   // State for search input
@@ -54,7 +56,7 @@ function Navbar() {
     try {
       // Make GET request to Jikan API with search query
       const response = await axios.get(
-        `https://api.jikan.moe/v4/anime?q=${value}&order_by=title&sort=asc&limit=10`
+        `${JIKAN_API_URL}?q=${value}&order_by=title&sort=asc&limit=10`
       );
       // Store search results in state
       setUserData(response.data.data);
