@@ -1,117 +1,4 @@
-// import { Button, Paper, Typography } from "@mui/material";
-// import { DataGrid } from "@mui/x-data-grid";
-// import { useState, useEffect, useContext } from "react";
-// // import { CartCountContext } from "../context/CartCountContext";
-// // import { CounterContext } from "../context/CounterContext";
-// // import { CounterContext } from "../context/CounterContext";
-// import { ProductContext } from "../context/ProductContext";
-// function CartContextDetails() {
-//   // const { cart } = useContext(CartCountContext);
-//   const  {cart ,count,handleDecrease,handleIncrease} = useContext(ProductContext)
-
-//   console.log("Cart", cart);
-//   const [rows, setRows] = useState([]);
-
-//   useEffect(() => {
-//     const formattedRows = cart.map((item, index) => ({
-//       ...item,
-//       id: index + 1,
-//       image: item.images?.jpg?.image_url,
-//     }));
-//     setRows(formattedRows);
-//   }, [cart]);
-
-//   const columns = [
-//     { field: "id", headerName: "ID", width: 100 },
-//     {
-//       field: "image",
-//       headerName: "Image",
-//       width: 400,
-
-//       renderCell: (params) => {
-//         console.log("params", params);
-//         return (
-//           <img
-//             src={params.formattedValue}
-//             alt="anime"
-//             style={{ width: "50px", height: "70px", borderRadius: "5px" }}
-//           />
-//         );
-//       },
-//     },
-//     { field: "title", headerName: "Title", width: 300 },
-//     {
-//       field: "quantity",
-//       headerName: "Quantity",
-//       width: 300,
-//       renderCell: (params) => (
-//         <>
-//           <Button
-//             variant="outlined"
-//             size="small"
-//             onClick={() => handleDecrease(params.row.index)}
-//             style={{ marginLeft: "10px" }}
-//           >
-//             -
-//           </Button>
-//           {params.count}
-
-//           <Button
-//             variant="outlined"
-//             size="small"
-//             onClick={() => handleIncrease(params.row.index)}
-//           >
-//             +
-//           </Button>
-//         </>
-//       ),
-//     },
-//     {
-//       field: "actions",
-//       headerName: "Actions",
-//       width: 300,
-//       renderCell: (params) => (
-//         <Button
-//           variant="contained"
-//           onClick={() => {
-//             const id = params.row.id;
-//             setRows((prevRows) => prevRows.filter((row) => row.id !== id));
-//           }}
-//         >
-//           DELETE
-//         </Button>
-//       ),
-//     },
-//   ];
-//   return (
-//     <>
-//       <div>
-//         <Typography
-//           variant="h3"
-//           align="left"
-//           mt={5}
-//           sx={{ fontFamily: "cursive" }}
-//         >
-//           Cart Details Page :
-//         </Typography>
-//       </div>
-//       <div>
-//         <Paper>
-//           <DataGrid
-//             rows={rows}
-//             columns={columns}
-//             pageSize={5}
-//             rowsPerPageOptions={[5]}
-//             checkboxSelection
-//           />
-//         </Paper>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default CartContextDetails;
-
+// Import necessary components and hooks
 import {
   Button,
   Paper,
@@ -126,56 +13,63 @@ import {
 import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 
+// CartContextDetails component - displays items added to the cart
 function CartContextDetails() {
+  // Destructure cart state and action handlers from ProductContext
   const { cart, handleDecrease, handleIncrease, handleDelete } =
     useContext(ProductContext);
 
   return (
     <>
+      {/* Heading for the page */}
       <Typography variant="h4" mt={3} mb={2} sx={{ fontFamily: "cursive" }}>
-        Cart Details Page :
+        Selected Carts :-
       </Typography>
 
+      {/* Container for the table */}
       <TableContainer component={Paper}>
+        {/* If cart is empty, show message */}
         {cart.length === 0 ? (
           <Typography
             variant="h6"
             align="center"
-            sx={{ py: 5, fontStyle: "italic", color: "gray", padding: 20 }}
+            sx={{
+              py: 5,
+              fontStyle: "italic",
+              color: "gray",
+              padding: 20,
+            }}
           >
-            {" "}
-            ⚠️ No items selected You haven’t added any items to your cart yet.
+            ⚠️ No items selected. You haven’t added any items to your cart yet.
             Please select at least one item before proceeding to the Selected
             Card section.
-            <a href="./" target="_blank">
+            {/* Simple link to go back to home page */}
+            <a href="./" target="_blank" style={{ display: "block", marginTop: 10 }}>
               Visit Our Site
             </a>
           </Typography>
         ) : (
+          // If cart has items, display the table
           <Table>
+            {/* Table Header */}
             <TableHead>
               <TableRow>
-                <TableCell>
-                  <b>ID</b>
-                </TableCell>
-                <TableCell>
-                  <b>Image</b>
-                </TableCell>
-                <TableCell>
-                  <b>Title</b>
-                </TableCell>
-                <TableCell>
-                  <b>Quantity</b>
-                </TableCell>
-                <TableCell>
-                  <b>Actions</b>
-                </TableCell>
+                <TableCell><b>ID</b></TableCell>
+                <TableCell><b>Image</b></TableCell>
+                <TableCell><b>Title</b></TableCell>
+                <TableCell><b>Quantity</b></TableCell>
+                <TableCell><b>Actions</b></TableCell>
               </TableRow>
             </TableHead>
+
+            {/* Table Body - Mapping through cart items */}
             <TableBody>
               {cart.map((item, index) => (
                 <TableRow key={index}>
+                  {/* Item Index (serial number) */}
                   <TableCell>{index + 1}</TableCell>
+
+                  {/* Anime Thumbnail */}
                   <TableCell>
                     <img
                       src={item.images?.jpg?.image_url}
@@ -187,7 +81,11 @@ function CartContextDetails() {
                       }}
                     />
                   </TableCell>
+
+                  {/* Anime Title */}
                   <TableCell>{item.title}</TableCell>
+
+                  {/* Quantity control with increment/decrement buttons */}
                   <TableCell>
                     <Button
                       variant="outlined"
@@ -207,6 +105,8 @@ function CartContextDetails() {
                       +
                     </Button>
                   </TableCell>
+
+                  {/* Delete button to remove item from cart */}
                   <TableCell>
                     <Button
                       variant="contained"
@@ -225,5 +125,6 @@ function CartContextDetails() {
     </>
   );
 }
+
 
 export default CartContextDetails;
