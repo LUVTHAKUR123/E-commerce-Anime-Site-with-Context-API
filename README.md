@@ -16,18 +16,18 @@ A simple yet functional anime-themed product listing web application built with 
 
 ---
 
-## 🛠️ Tech Stack
+## 🔧 Tech Stack
 
-| Tool            | Description                         |
-|-----------------|-------------------------------------|
-| React           | Frontend JavaScript library         |
-| React Router    | For client-side routing             |
-| Context API     | State management for cart & data    |
-| Material UI     | UI components and styling           |
-| Axios           | HTTP client to call Jikan API       |
-| Jikan API       | Anime data source (unofficial MyAnimeList API) |
-
----
+| Tool / Library      | Version           | Description                              | Link |
+|---------------------|-------------------|------------------------------------------|------|
+| **React**           | ^18.x             | Frontend JavaScript library              | [React](https://reactjs.org/) |
+| **React Router DOM**| ^6.x              | Client-side routing                      | [React Router](https://reactrouter.com/en/main) |
+| **Material UI (MUI)**| ^5.x              | UI component library                     | [Material UI](https://mui.com/) |
+| **Axios**           | ^1.x              | Promise-based HTTP client                | [Axios](https://axios-http.com/) |
+| **Jikan API**       | v4 (public)       | Anime data (MyAnimeList unofficial API)  | [Jikan API](https://jikan.moe/) |
+| **React Context API** | Built-in         | State management                         | [React Context](https://reactjs.org/docs/context.html) |
+| **JavaScript (ES6+)** | -               | Language used for logic                  | [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| **HTML5 & CSS3**     | -                | Page structure and styling               | [HTML & CSS](https://developer.mozilla.org/en-US/docs/Web/HTML) |
 
 
 ---
