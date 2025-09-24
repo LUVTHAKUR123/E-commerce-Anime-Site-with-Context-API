@@ -35,7 +35,17 @@ A simple yet functional anime-themed product listing web application built with 
 
 ## 📸 Screenshots
 
-> _You can add screenshots here of your home page, product detail page, and cart._
+### Home Page  
+![Home Page](./src/assets/screenshots/Home.png) 
+
+###Selected  Cart Details Page  
+![Home Page](./src/assets/screenshots/SelectedCartlists.png)  
+
+###Cart Details Page  
+![Home Page](./src/assets/screenshots/CartDetails.png)  
+
+###Searchbar Page  
+![Home Page](./src/assets/screenshots/Searchbar.png)
 
 ---
 
