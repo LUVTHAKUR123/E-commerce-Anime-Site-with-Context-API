@@ -36,16 +36,16 @@ A simple yet functional anime-themed product listing web application built with 
 ## 📸 Screenshots
 
 ### 🏠 Home Page  
-![Home Page](./assets/images/Home.png) 
+![Home Page](./scr/assets/images/Home.png) 
 
 ### 🛒 Selected Cart Details Page  
-![Selected Cart Details](./assets/images/SelectedCartlists.png)  
+![Selected Cart Details](./src/assets/images/SelectedCartlists.png)  
 
 ### 📄 Product (Card) Details Page  
-![Cart Details](./assets/images/CartDetails.png)  
+![Cart Details](./src/assets/images/CartDetails.png)  
 
 ### 🔍 Searchbar Dropdown Results  
-![Searchbar](./assets/images/Searchbar.png)
+![Searchbar](./src/assets/images/Searchbar.png)
 
 
 ---
