@@ -34,7 +34,7 @@ function CardDetails() {
     color: "#333",
   };
 
-  // JSX rendering of the detailed card
+
   return (
     <div>
       {/* Page Title */}
@@ -52,7 +52,7 @@ function CardDetails() {
           alignItems: "flex-start",
           width: "50%",
           margin: "0 auto",
-          boxShadow: "0px 0px 16px 0px #6683d2ab", // Box shadow effect
+          boxShadow: "0px 0px 16px 0px #6683d2ab", 
         }}
       >
         {/* Anime Image */}
