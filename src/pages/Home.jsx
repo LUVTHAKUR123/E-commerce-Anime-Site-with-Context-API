@@ -2,11 +2,13 @@
 import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../context/ProductContext"; // Importing global context to manage data and cart
 import axios from "axios"; // Axios for API calls
-import { Container, Button, Grid, Typography } from "@mui/material"; // MUI components for layout, UI, and typography
+import { Button, Grid, Typography,Card,CardMedia,CardContent,CardActions } from "@mui/material"; // MUI components for layout, UI, and typography
 import { useNavigate } from "react-router-dom"; // React Router hook for navigation
-// Functional component: Home page
+
+// API URL from environment
 const API_URL = import.meta.env.VITE_API_URL;
 
+// Functional component: Home page
 function Home() {
   // Destructuring data, loading state, and handlers from context
   const { data, setData, loading, setLoading, handleAddToCart } =
@@ -41,19 +43,21 @@ function Home() {
   return (
     <>
       {/* Page Title */}
-      <Typography
+        <Typography
         variant="h4"
-        style={{
+        align="left"
+        sx={{
           fontFamily: "cursive",
           fontWeight: "bold",
-          padding: "20px",
+          paddingY: 3,
+          color: "#000000ff",
         }}
       >
         Anime Lists :
       </Typography>
 
       {/* Main grid container for displaying anime cards */}
-      <Grid container spacing={4} style={{ padding: 20 }}>
+           <Grid container spacing={2} sx={{ px: 3, pb: 5 }}>
         {/* Conditional rendering: show loading text if still fetching */}
         {loading ? (
           <Grid item xs={12} style={{ textAlign: "center", marginTop: "50px" }}>
@@ -65,27 +69,28 @@ function Home() {
           data.map((item) => (
             // Each anime card inside a responsive grid item
             <Grid item xs={12} sm={6} md={4} lg={3} key={item.mal_id}>
-              <div
-                style={{
-                  border: "1px solid #ccc",
-                  borderRadius: 8,
-                  padding: 16,
+              <Card
+                    sx={{
+                  borderRadius: 3,
+                  boxShadow: 3,
+                  transition: "transform 0.6s",
+                  "&:hover": { transform: "scale(1.05)",background:"#ebd323ff", color:"white" },
                 }}
               >
                 {/* Anime image (clickable) */}
-                <img
-                  src={item.images.jpg.image_url}
+                <CardMedia
+                    component="img"
+                  height="300"
+                  image={item.images.jpg.image_url}
                   alt={item.title}
-                  style={{
-                    width: "100%",
-                    borderRadius: 8,
-                    height: 300,
-                    objectFit: "cover",
-                  }}
-                  onClick={() => handleOpenCard(item)} // Open detail card on click
+                  sx={{ cursor: "pointer", objectFit: "cover" }}
+                  onClick={() => handleOpenCard(item)}// Open detail card on click
                 />
 
                 {/* Anime title */}
+                 {/* Card Content */}
+                 <CardContent>
+
                 <Typography
                   style={{
                     fontFamily: "cursive",
@@ -93,7 +98,7 @@ function Home() {
                     fontSize: "17px",
                     marginTop: 8,
                   }}
-                >
+                  >
                   {item.title}
                 </Typography>
 
@@ -101,8 +106,10 @@ function Home() {
                 <Typography>Score: {item.score}</Typography>
                 <Typography>Episodes: {item.episodes}</Typography>
                 <Typography>Type: {item.type}</Typography>
+                  </CardContent>
 
-                {/* Add to Cart button */}
+                 {/* Card Actions */}
+                <CardActions sx={{ justifyContent: "center", pb: 2 }}>
                 <Button
                   variant="contained"
                   sx={{
@@ -115,7 +122,8 @@ function Home() {
                 >
                   ADD TO CART
                 </Button>
-              </div>
+                </CardActions>
+              </Card>
             </Grid>
           ))
         )}

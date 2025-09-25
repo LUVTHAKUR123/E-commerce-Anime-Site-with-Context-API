@@ -184,7 +184,7 @@ function Navbar() {
                   (sum, item) => sum + (item.quantity || 1), // Sum quantities
                   0
                 )}
-                color="error" W
+                color="error" 
               >
                 <ShoppingCartIcon sx={{ fontSize: 35 }} /> 
               </Badge>
