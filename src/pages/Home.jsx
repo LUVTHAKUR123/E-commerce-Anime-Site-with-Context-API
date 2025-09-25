@@ -74,7 +74,7 @@ function Home() {
                   borderRadius: 3,
                   boxShadow: 3,
                   transition: "transform 0.6s",
-                  "&:hover": { transform: "scale(1.05)",background:"#ebd323ff", color:"white" },
+                  "&:hover": { transform: "scale(1.05)",background:"#000000ff", color:"white" },
                 }}
               >
                 {/* Anime image (clickable) */}
